@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: novocollection3-coll-b680ca7b2da84418b4834045965ccd69-srv
+spec:
+  selector:
+    app: novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9026
+  type: ClusterIP

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: novocollection3-coll-b680ca7b2da84418b4834045965ccd69-depl
+  labels:
+    app: novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+  template:
+    metadata:
+      labels:
+        app: novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+    spec:
+      containers:
+        - name: novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:novocollection3-coll-b680ca7b2da84418b4834045965ccd69
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9026
